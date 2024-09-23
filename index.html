@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AVATAR KOMBAT!</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <h1><img src="./images/title.png" alt="title"></h1>
+
+    <section id="seleccionar-avatar">
+        <h2>•<img src="./images/choose-your-avatar.png" class="h2-img" width="350" alt=""></h2>
+
+        <div class="contenedor-elegir-avatar">
+            <div class="contenedor-avatar">
+                <input type="radio" name="avatar" id="aang">
+                <label for="aang"><img src="./images/aang-name.png" width="90" alt=""></label>
+                <label for="aang"><img src="./images/aang.jpg" style="border-radius: 50px;" width="100" height="100" alt=""></label>
+            </div>
+           
+            <div class="contenedor-avatar">   
+                <input type="radio" name="avatar" id="zuko">
+                <label for="zuko"><img src="./images/zuko-name.png" width="90" alt=""></label>
+                <label for="zuko"><img src="./images/zuko.jpg" style="border-radius: 50px;" width="100" height="100" alt=""></label>
+            </div>
+            
+            <div class="contenedor-avatar">
+                <input type="radio" name="avatar" id="katara">
+                <label for="katara"><img src="./images/katara-name.png" width="90" alt=""></label>
+                <label for="katara"><img src="./images/katara.png" style="border-radius: 50px;" width="100" height="100" alt=""></label>
+            </div>
+            
+            <div class="contenedor-avatar">
+                <input type="radio" name="avatar" id="toph">
+                <label for="toph"><img src="./images/toph-name.png" width="90" alt=""></label>
+                <label for="toph"><img src="./images/toph.png" style="border-radius: 50px;" width="100" height="100" alt=""></label>
+            </div>
+        </div>
+
+        <div class="btn-done">
+            <button id="btn-done">Done!</button>
+        </div>
+    </section>
+
+    <section id="seleccionar-ataque">
+        <h2>•<img src="./images/choose-your-atack.png" class="h2-img" width="350" alt=""></h2>
+
+        <div class="contenedor-seccion-ataque">
+
+            <div class="contenedor-img-combate">
+                <img id="img-avatar-combate" src="" style="border-radius: 50px;" width="100" height="100" alt="">
+                <img src="./images/vs.png" width="290" alt="">
+                <img id="img-avatar-enemigo-combate" src="" style="border-radius: 50px;" width="100" height="100" alt="">
+            </div>
+
+            <div class="contenedor-ataques">
+                <button id="btn-fire">Fire 🔥</button>
+                <button id="btn-water">Water 💧</button>
+                <button id="btn-earth">Earth 🌱</button>
+                <button id="btn-air">Air 🌪️</button>
+            </div>
+    
+            <div class="contenedor-vidas">
+                <div class="contenedor-your-avatar">
+                    <p>Your Avatar <span id="name-avatar"></span><span id="vidas-jugador"></span></p>
+                    <p id="vidas-mi-avatar">Lives: ❤️❤️❤️</p>
+                </div>
+                <div class="contenedor-enemy-avatar">
+                    <p>Enemy's Avatar <span id="name-enemy-avatar"></span><span id="vidas-enemigo"></span></p>
+                    <p id="vidas-mi-enemigo">Lives: ❤️❤️❤️</p>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+
+    <div class="contenedor-mensajes-restart">
+        <section id="mensajes">
+            <!-- Aqui va el mensaje dinámico -->
+        </section>
+    
+        <section id="reiniciar">
+            <button id="btn-restart">Restart</button>
+        </section>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="sweetalert2.all.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
