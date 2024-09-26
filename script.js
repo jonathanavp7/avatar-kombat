@@ -13,6 +13,15 @@ function iniciarJuego() {
     let seccionAtaque = document.getElementById('seleccionar-ataque')
     seccionAtaque.style.display = 'none'
 
+    let imgWinOrLose = document.getElementById('img-win-or-lose')
+    imgWinOrLose.style.display = 'none'
+
+    let seccionWin = document.getElementById('win')
+    seccionWin.style.display = 'none'
+
+    let seccionLose = document.getElementById('lose')
+    seccionLose.style.display = 'none'
+
     let seccionReiniciar = document.getElementById('reiniciar')
     seccionReiniciar.style.display = 'none'
 
@@ -274,9 +283,23 @@ function winOrLose() {
 
 function revisarVidas() {
     if (vidasEnemigo == 0) {
-        crearMensajefinal("CONGRATS! YOUR AVATAR WON!")
+        crearMensajefinal()
+        let seccionWin = document.getElementById('win')
+        seccionWin.style.display = 'block'
+        let imgWinOrLose = document.getElementById('img-win-or-lose')
+        imgWinOrLose.style.display = 'block'
+        let winOrLose = document.getElementById('win-or-lose')
+        winOrLose.setAttribute('src', './images/win.png')
+        winOrLose.style.marginBottom = '30px'
+
     } else if (vidasJugador == 0) {
-        crearMensajefinal("SORRY! YOUR AVATAR WAS DEFEATED...")
+        crearMensajefinal()
+        let seccionLose = document.getElementById('lose')
+        seccionLose.style.display = 'block'
+        let imgWinOrLose = document.getElementById('img-win-or-lose')
+        imgWinOrLose.style.display = 'block'
+        let winOrLose = document.getElementById('win-or-lose')
+        winOrLose.setAttribute('src', './images/lose.png')
     }
 }
 
@@ -295,23 +318,7 @@ function crearMensaje(resultado) {
     });
 }
 
-function crearMensajefinal(resultadoFinal) {
-    let divMensaje = document.getElementById('mensajes')
-    divMensaje.innerText = ''
-    let parrafo = document.createElement('p')
-    parrafo.innerText = resultadoFinal
-    divMensaje.append(parrafo)
-
-    let btnFire = document.getElementById('btn-fire')
-    let btnWater = document.getElementById('btn-water')
-    let btnEarth = document.getElementById('btn-earth')
-    let btnAir = document.getElementById('btn-air')
-
-    btnFire.disabled = true
-    btnWater.disabled = true
-    btnEarth.disabled = true
-    btnAir.disabled = true
-
+function crearMensajefinal() {
     let seccionReiniciar = document.getElementById('reiniciar')
     seccionReiniciar.style.display = 'block'
 
