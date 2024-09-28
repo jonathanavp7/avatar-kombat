@@ -1,3 +1,9 @@
+let seccionAtaque = document.getElementById('seleccionar-ataque')
+let imgWinOrLose = document.getElementById('img-win-or-lose')
+let seccionWin = document.getElementById('win')
+let seccionLose = document.getElementById('lose')
+let seccionReiniciar = document.getElementById('reiniciar')
+
 let ataqueJugador
 let ataqueEnemigo
 let vidasJugador = 3;
@@ -10,19 +16,14 @@ let toph = document.getElementById('toph');
 let spanAvatarJugdor = document.getElementById('name-avatar');
 
 function iniciarJuego() {
-    let seccionAtaque = document.getElementById('seleccionar-ataque')
     seccionAtaque.style.display = 'none'
 
-    let imgWinOrLose = document.getElementById('img-win-or-lose')
     imgWinOrLose.style.display = 'none'
 
-    let seccionWin = document.getElementById('win')
     seccionWin.style.display = 'none'
 
-    let seccionLose = document.getElementById('lose')
     seccionLose.style.display = 'none'
 
-    let seccionReiniciar = document.getElementById('reiniciar')
     seccionReiniciar.style.display = 'none'
 
     let btnDone = document.getElementById('btn-done')
@@ -47,7 +48,6 @@ function iniciarJuego() {
 function seleccionarAvatar() {
 
     let seleccionarAvatar = document.getElementById('seleccionar-avatar')
-    let seccionAtaque = document.getElementById('seleccionar-ataque')
     let seccionImgAvatar = document.getElementById('img-avatar-combate')
 
     if (aang.checked) {
@@ -212,8 +212,6 @@ function ataqueAleatorioEnemigo() {
 
 function winOrLose() {
 
-    let spanVidasJugador = document.getElementById('vidas-jugador')
-    let spanVidasEnemigo = document.getElementById('vidas-enemigo')
     let vidasMiAvatar = document.getElementById('vidas-mi-avatar')
     let vidasMiEnemigo = document.getElementById('vidas-mi-enemigo')
 
@@ -284,20 +282,16 @@ function winOrLose() {
 function revisarVidas() {
     if (vidasEnemigo == 0) {
         crearMensajefinal()
-        let seccionWin = document.getElementById('win')
-        seccionWin.style.display = 'block'
-        let imgWinOrLose = document.getElementById('img-win-or-lose')
-        imgWinOrLose.style.display = 'block'
+            seccionWin.style.display = 'block'
+            imgWinOrLose.style.display = 'block'
         let winOrLose = document.getElementById('win-or-lose')
         winOrLose.setAttribute('src', './images/win.png')
         winOrLose.style.marginBottom = '30px'
 
     } else if (vidasJugador == 0) {
         crearMensajefinal()
-        let seccionLose = document.getElementById('lose')
-        seccionLose.style.display = 'block'
-        let imgWinOrLose = document.getElementById('img-win-or-lose')
-        imgWinOrLose.style.display = 'block'
+            seccionLose.style.display = 'block'
+            imgWinOrLose.style.display = 'block'
         let winOrLose = document.getElementById('win-or-lose')
         winOrLose.setAttribute('src', './images/lose.png')
     }
@@ -319,7 +313,6 @@ function crearMensaje(resultado) {
 }
 
 function crearMensajefinal() {
-    let seccionReiniciar = document.getElementById('reiniciar')
     seccionReiniciar.style.display = 'block'
 
     let seleccionarAtaque = document.getElementById('seleccionar-ataque')

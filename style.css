@@ -200,7 +200,11 @@ button:disabled {
         width: 200px;
     }
 
-    #win, #lose img {
+    #win img, #lose img {
         width: 200px;
+    }
+
+    body {
+        background-repeat: repeat-y;
     }
 }
