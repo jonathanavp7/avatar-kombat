@@ -5,9 +5,25 @@
 }
 
 body {
+    max-width: 1300px;
     background-image: url(./images/background.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+#seleccionar-avatar {
+    width: 100%;
+    height: 100%;
+}
+
+#seleccionar-ataque {
+    width: 100%;
+    height: 100%;
+}
+
+.contenedor-mensajes-restart {
+    width: 100%;
+    height: 100%;
 }
 
 h1 {
